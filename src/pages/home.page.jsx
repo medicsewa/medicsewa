@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center w-[60%] min-w-[320px] mx-auto text-sm">
@@ -34,12 +36,15 @@ const HomePage = () => {
           </span>
         </p>
         <nav className="flex items-center justify-center gap-2 mt-8">
-          <a href="/terms-and-conditions" className="hover:underline">
+          <Link to="/terms-and-conditions" className="hover:underline">
             Terms &amp; Conditions
-          </a>
-          <a href="/privacy-policy" className="hover:underline">
+          </Link>
+          <Link to="/privacy-policy" className="hover:underline">
             Privacy Policy
-          </a>
+          </Link>
+          <Link to="/playground" className="hover:underline">
+            Playground
+          </Link>
         </nav>
       </div>
     </div>

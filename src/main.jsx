@@ -1,15 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import loadable from "@loadable/component";
 
 const HomePage = loadable(() => import("./pages/home.page"));
 const PrivacyPage = loadable(() => import("./pages/privacy.page"));
+const TermAndConditionPage = loadable(() =>
+  import("./pages/term-and-condition.page")
+);
 const ErrorPage = loadable(() => import("./pages/error.page"));
 const PlaygroundPage = loadable(() => import("./pages/playground.page"));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <HomePage />,
@@ -17,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/terms-and-conditions",
-    element: <PrivacyPage />,
+    element: <TermAndConditionPage />,
     errorElement: <ErrorPage />,
   },
   {

@@ -75,22 +75,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # - name: Prepare GitHub Pages
-      #   run: touch ./dist/.nojekyll
-
-      # - name: Deploy to GitHub Pages 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4
-      #   with:
-      #     branch: gh-pages
-      #     folder: dist
-      #     clean: true
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-
-      # - name: Notify on deployment success
-      #   if: success()
-      #   run: echo "Deployment to GitHub Pages was successful!"
-
-      # - name: Notify on deployment failure
-      #   if: failure()
-      #   run: echo "Deployment to GitHub Pages failed!"
