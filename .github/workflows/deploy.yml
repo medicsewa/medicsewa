@@ -50,6 +50,7 @@ jobs:
           branch: gh-pages
           folder: dist
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Notify on deployment success
         if: success()
